@@ -1,0 +1,112 @@
+/* In this part I set some basics that are followed throughout the page. I also set the colors for the navigation bar and the links. */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Akshar', sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: black;
+}
+
+/* This part is for the navigation menu and contains stiff such as how it should be aligned and sizes*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-bar {
+display: flex;
+width: 100%;
+}
+
+.nav-bar div {
+  flex: 1;
+  padding: 15px 0;
+  color: white;
+  text-transform: uppercase;
+}
+.nav-bar .light-blue {
+  background-color: #81C4FF;
+} 
+.nav-bar .dark-blue {
+  background-color: #16588E;
+}
+ 
+ 
+.nav-bar .red {
+  background-color: #E7222E;
+}
+
+/* This part just contains hero text */
+.hero-text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* This part is for the sections their style, borders, and their dimensions*/
+section {
+  margin: 40px auto;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Just the formatting for the "Links" part */
+.links-section {
+  margin-top: 20px;
+}
+/*This part I set the links to be vertical, and I also set the spacing between them*/
+.links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/*In this part I explain the how the texts is going to look like inside the containers */
+.links-container a {
+  display: block;
+  padding: 15px;
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center; 
+  transition: transform 0.3s ease;
+}
+/* Here I followed the w3 school to assign the color of each container*/
+.links-container a:nth-child(1) {
+background-color: #81C4FF;
+}
+.links-container a:nth-child(2) {
+background-color: #16588E;
+} 
+.links-container a:nth-child(3) {
+   background-color: #E7222E;
+}
+
+
+/* For this part I watched a youtube video mixed with W3 schools to make the hover effect*/
+.links-container a:hover {
+  transform: scale(1.1);
+}
+.links-container a:active {
+  opacity: 0.7;
+}
