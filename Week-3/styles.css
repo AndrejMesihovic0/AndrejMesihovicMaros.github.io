@@ -1,0 +1,130 @@
+/* For this I just set the basic fonts and background colors for the website  */
+body {
+    margin: 0;
+    font-family: 'Akshar', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* This is where I start working on the left section */
+  .left-guide {
+    width: 20%;
+    position: relative;
+    background: linear-gradient(
+      -45deg,
+      #81c4ff 0%,
+      #81c4ff 33.3%,
+      #16588e 33.3%,
+      #16588e 66.6%,
+      #e7222e 66.6%,
+      #e7222e 100%
+    );
+    
+    /* In this part I set up stuff such as how to arrange items and how much space to leave between them*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+  }
+  /* This is the part I set the logo for*/
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .bmw-logo {
+    width: 60px;
+    height: auto;
+  }
+  
+  .slogan {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  /* This is where I list the links on the left side*/
+  .guide-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* This is where the right section starts*/
+  .right-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  
+  .hero-text {
+    font-size: 2.5rem;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
+  }
+  
+  .parent {
+    margin-bottom: 4rem;
+  }
+  
+  .child {
+    margin-top: 2rem;
+  }
+  
+  .links-section {
+    margin-top: 2rem;
+  }
+  
+  /* This part tells it to stack the links vertically*/
+  .links-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .link {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* this is where I choose the colors*/
+  .light-blue {
+    background-color: #81c4ff;
+  }
+  
+  .dark-blue {
+    background-color: #16588e;
+  }
+  
+  .red {
+    background-color: #e7222e;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-guide {
+      width: 100%;
+      height: auto;
+    }
+  
+    .right-content {
+      width: 100%;
+    }
+  }
