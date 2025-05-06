@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expand Your Music Taste</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Expand Your Music Taste</h1>
+
+  <div class="container">
+    <!-- FILTERS tab -->
+    <div class="filter-box">
+      <h2>FILTERS</h2>
+      <button class="filter-button" onclick="filterMusic('Pop')">Pop</button>
+      <button class="filter-button" onclick="filterMusic('Country')">Country</button>
+      <button class="filter-button" onclick="filterMusic('Jazz')">Jazz</button>
+      <button class="filter-button" onclick="filterMusic('Bosnian music')">Bosnian music</button>
+    </div>
+
+    <!-- Song Suggestion section -->
+    <div class="suggest-section">
+      <button class="button" onclick="suggestSong()">Suggest a Song</button>
+      <div class="record" onclick="suggestSong()">
+        <span style="color:#1DB954; font-weight: bold;">🎵</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Song Recommendation popup -->
+  <div class="popup hidden" id="songPopup">
+    <div class="popup-content">
+      <h3>🎧 Your Song Recommendation:</h3>
+      <p id="songInfo">Song Name by Artist</p>
+      <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const genreVideos = {
+      Pop: {
+        name: "Blinding Lights",
+        artist: "The Weeknd",
+        youtubeId: "fHI8X4OXluQ"
+      },
+      Country: {
+        name: "Take Me Home, Country Roads",
+        artist: "John Denver",
+        youtubeId: "1vrEljMfXYo"
+      },
+      Jazz: {
+        name: "So What",
+        artist: "Miles Davis",
+        youtubeId: "zqNTltOGh5c"
+      },
+      "Bosnian music": {
+        name: "Djurdjevdan",
+        artist: "Bijelo Dugme",
+        youtubeId: "nKkDoR04t90"
+      }
+    };
+
+    function filterMusic(genre) {
+      const song = genreVideos[genre];
+//this checks if the song is available for the selected genre
+      if (!song) {
+        alert("No video available for this genre.");
+        return;
+      }
+
+      document.getElementById('songInfo').innerHTML = `
+        <strong>${song.name}</strong> by ${song.artist}<br/>
+        <iframe width="300" height="200"
+          src="https://www.youtube.com/embed/${song.youtubeId}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      `;
+      document.getElementById('songPopup').classList.remove('hidden');
+    }
+
+    function suggestSong() {
+      // this shpould pick out a random genre from genreVideos I saw this on the internet
+      const genres = Object.keys(genreVideos);
+      const randomGenre = genres[Math.floor(Math.random() * genres.length)];
+      filterMusic(randomGenre);
+    }
+    // This function is for clos`ing the popup
+    function closePopup() {
+      document.getElementById('songPopup').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

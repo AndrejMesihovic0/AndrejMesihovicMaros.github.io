@@ -1,0 +1,168 @@
+/* Created standards which will follow throught the code */
+body {
+    background-color: #0D110D;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Header */
+  h1 {
+    color: #1DB954;
+    margin-top: 40px;
+    font-size: 2.5rem;
+  }
+  
+  /* Layout of the page and centering */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+  }
+  
+  /* Filter Box Probably going to change up a bit*/
+  .filter-box {
+    background-color: #7c7c7c;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #1DB954;
+    box-shadow: 0 0 20px rgba(29, 185, 84, 0.2);
+  }
+  
+  .filter-box h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #1DB954;
+    padding-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Filter Buttons same as the suggest a song button */
+  .filter-button {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #1DB954;
+    color: #1DB954;
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #1DB954;
+    color: #0D110D;
+    transform: scale(1.05);
+  }
+    .button {
+    background-color: transparent;
+    border: 2px solid #1DB954;
+    color: #1DB954;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .button:hover {
+    background-color: #1DB954;
+    color: #0D110D;
+    transform: scale(1.05);
+  }
+  
+  /* Record Design looking to change it up */
+  .record {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    border: 5px solid #1DB954;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* Popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 17, 13, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #1DB954;
+    padding: 30px;
+    border-radius: 10px;
+    color: #0D110D;
+    font-size: 1.2rem;
+    position: relative;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .popup h3 {
+    color: #0D110D;
+  }
+  
+  .close-btn {
+    background: none;
+    border: 2px solid #0D110D;
+    color: #0D110D;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  /* Utility */
+  .hidden {
+    display: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .filter-box {
+      width: 90%;
+    }
+  
+    .button, .filter-button {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  
+    .record {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
